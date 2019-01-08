@@ -11,9 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
 //= require bootstrap
-//= require rails-ujs
-//= require activestorage
-//= require_tree .
+//= require turbolinks
+//= require_tree
+$('.dropdown-toggle').dropdown()
