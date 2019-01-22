@@ -5,7 +5,11 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-config.assets.initialize_on_precompile = false
+
+
+Rails.application.config
+  config.assets.initialize_on_precompile = false
+end
 
 module SampleApp
   class Application < Rails::Application
