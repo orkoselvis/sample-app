@@ -30,6 +30,10 @@ $ heroku run rails db:migrate
 rails server --environment production - to run server in production!!
 then: rails db:migrate RAILS_ENV=production
 
+$heroku logs --tail - to see all logs
+$git remote rm heroku - to remove remote heroku app
+$git remote add heroku git@heroku.com:project.git - to add existing remote app locally
+
 
 $ rails console
 >> user = User.new(name: "Foo Bar", email: "foo@invalid",
@@ -38,4 +42,4 @@ $ rails console
 => false
 >> user.errors.full_messages
 => ["Email is invalid", "Password is too short (minimum is 6 characters)"]
-hui talalala
+kkoo
