@@ -42,4 +42,4 @@ $ rails console
 => false
 >> user.errors.full_messages
 => ["Email is invalid", "Password is too short (minimum is 6 characters)"]
-kkoo
+kkoo, kko 2
