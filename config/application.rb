@@ -6,11 +6,6 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-
-Rails.application.config
-  config.assets.initialize_on_precompile = false
-end
-
 module SampleApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
