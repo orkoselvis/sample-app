@@ -75,4 +75,5 @@ class PasswordResetsTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_match /FILL_IN/i, response.body
   end
+
 end
