@@ -74,8 +74,6 @@ class UsersController < ApplicationController
                                    :password_confirmation)
   end
 
-    # Before filters
-
     # Confirms the correct user.
   def correct_user
     @user = User.find(params[:id])
