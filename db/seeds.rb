@@ -1,8 +1,9 @@
+# Users
 User.create!(name:  "Example User",
              email: "example@railstutorial.org",
              password:              "foobar",
              password_confirmation: "foobar",
-             admin: true,
+             admin:     true,
              activated: true,
              activated_at: Time.zone.now)
 
@@ -18,6 +19,7 @@ User.create!(name:  "Example User",
                activated_at: Time.zone.now)
 end
 
+# Microposts
 users = User.order(:created_at).take(6)
 50.times do
   content = Faker::Lorem.sentence(5)
