@@ -1,0 +1,15 @@
+one:
+  follower: viter
+  followed: lana
+
+two:
+  follower: viter
+  followed: malory
+
+three:
+  follower: lana
+  followed: viter
+
+four:
+  follower: archer
+  followed: viter
