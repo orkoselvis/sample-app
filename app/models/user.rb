@@ -1,6 +1,5 @@
 class User < ApplicationRecord
   has_many :microposts, dependent: :destroy
-  has_many :following
   attr_accessor :remember_token, :activation_token, :reset_token
   attr_accessor :remember_token, :activation_token
   before_save   :downcase_email
@@ -13,6 +12,11 @@ class User < ApplicationRecord
 
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  has_many :relationships_as_follower, foreign_key: :follower_id, class_name: "Relationship"
+  has_many :relationships_as_followed, foreign_key: :followed_id, class_name: "Relationship"
+
+  has_many :followers, through: :relationships_as_followed, source: :follower
+  has_many :following, through: :relationships_as_follower, source: :followed
 
   # Returns the hash digest of the given string.
   def self.digest(string)
