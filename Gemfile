@@ -11,7 +11,7 @@ gem 'faker',          '1.7.3'
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
 # Use sqlite3 as the database for Active Record
-gem 'pg',                      '0.20.0'
+gem 'pg'
 gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
 # Use Puma as the app server
@@ -58,6 +58,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'pg'
 end
 
 group :test do
@@ -76,6 +77,6 @@ end
   gem 'minitest-reporters', group: :test
 
 group :production do
-  gem 'pg',  '0.20.0'
+  gem 'pg'
   gem 'fog', '1.42'
 end
